@@ -96,9 +96,8 @@
       </Trigger>
       <Trigger Enabled="true" Sequential="True" Name="Added new combatant" Id="555438dd-eb99-4978-8b77-e2799e882b1f" RegularExpression="^.{15}03:(?&lt;actorId&gt;.{8}):[^:]*:[^:]*:[^:]*: (19240000|38480000)">
         <Actions>
-          <Action OrderNumber="1" VariableOp="SetString" VariableName="hotfootactorsafe" VariableExpression="${actorId}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="hotfootactorsafe" VariableExpression="${actorId}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" Asynchronous="False">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
