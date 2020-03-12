@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder ZoneFilterEnabled="True" Id="67508366-4fe2-408e-9054-f39392388e24" ZoneFilterRegularExpression="Eden's Verse: Refulgence \(Savage\)|희망의 낙원 에덴: 공명편\(영웅\) \(4\)" Name="E8S - Hallowed Wings" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="Mirror, Mirror" Id="10d0ef52-0559-4684-8136-679d042b9716" RegularExpression="^.{15}15:(?&lt;shivaId&gt;(.{8})):[^:]*:4D5A">
+        <Actions>
+          <Action OrderNumber="1" VariableOp="SetString" VariableName="shivaId" VariableExpression="${shivaId}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" VariableName="shivaId" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="16000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="Reflected Hallowed Wings" Id="0d4112b4-3724-4dc4-aeb7-c745504f71af" RegularExpression="^.{15}15:(?&lt;mirrorId&gt;(.{8})):[^:]*:4D91">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="clockwise" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${mirrorId}].x}" ExpressionTypeL="Numeric" ExpressionR="80" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="counter clockwise" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${mirrorId}].x}" ExpressionTypeL="Numeric" ExpressionR="120" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${evar:shivaId}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="Hallowed Wings" Id="2098a29a-ade8-4ad9-ac8e-ba7b9e07c4bd" RegularExpression="^.{15}14:(?&lt;wingCast&gt;(4D75|4D76))">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="100">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="1 4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Xor">
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:abs(${_ffxiventity[${var:shivaId}].heading})}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${wingCast}" ExpressionTypeL="String" ExpressionR="4D75" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" UseTTSTextExpression="2 3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Xor">
+              <ConditionSingle Enabled="true" ExpressionL="${numeric:abs(${_ffxiventity[${var:shivaId}].heading})}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${wingCast}" ExpressionTypeL="String" ExpressionR="4D76" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="400">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" UseTTSTextExpression="go left" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${wingCast}" ExpressionTypeL="String" ExpressionR="4D76" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" UseTTSTextExpression="go right" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${wingCast}" ExpressionTypeL="String" ExpressionR="4D75" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${evar:shivaId}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+      <Trigger Enabled="true" Name="Wipe" Id="615a69ca-896d-42fb-8982-bb500da36b57" RegularExpression="^\[[\d:\.]{12}\] 21:[\w]{8}:400000(03|10)">
+        <Actions>
+          <Action OrderNumber="1" VariableName="shivaId" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
