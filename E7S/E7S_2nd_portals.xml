@@ -7,39 +7,30 @@
         <Actions>
           <Action OrderNumber="1" ListVariableName="unforgivenIdolatries" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="04a7374b-ee6a-4c62-9aeb-d219eb280fbd" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="76a525aa-e363-4d99-b819-40663618f13b" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="4" VariableName="hasAstralDebuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="5" VariableName="hasUmbralDebuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="6" VariableName="swapOrStayTTS" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="7" VariableName="swapOrStayTTStwo" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="8" VariableName="whiteBirdsLeft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="9" VariableName="whiteBirdsRight" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
@@ -51,14 +42,12 @@
               <ConditionSingle Enabled="true" ExpressionL="${elvar:unforgivenIdolatries}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:unforgivenIdolatries.size}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="2" ListVariableOp="SortAlphaDesc" ListVariableName="unforgivenIdolatries" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="dd9af33d-cc71-4033-8375-f4cbb7658896" ActionType="ListVariable" ExecutionDelayExpression="1000">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${elvar:unforgivenIdolatries}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               <ConditionSingle Enabled="true" ExpressionL="${lvar:unforgivenIdolatries.size}" ExpressionTypeL="Numeric" ExpressionR="19" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
@@ -70,42 +59,35 @@
               <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="08BE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="2" VariableName="hasUmbralDebuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="08BE" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="hasUmbralDebuff" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="08BF" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="4" VariableName="hasAstralDebuff" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="And">
               <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="08BF" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="5" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="04a7374b-ee6a-4c62-9aeb-d219eb280fbd" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="6" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="76a525aa-e363-4d99-b819-40663618f13b" ActionType="Trigger">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="7" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="04a7374b-ee6a-4c62-9aeb-d219eb280fbd" ActionType="Trigger" ExecutionDelayExpression="45000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
@@ -114,11 +96,9 @@
         <Actions>
           <Action OrderNumber="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="EnableTrigger" TriggerId="76a525aa-e363-4d99-b819-40663618f13b" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="76a525aa-e363-4d99-b819-40663618f13b" ActionType="Trigger" ExecutionDelayExpression="15000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
@@ -127,29 +107,24 @@
         <Actions>
           <Action OrderNumber="1" VariableName="whiteBirdsLeft" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="2" VariableName="whiteBirdsRight" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="3" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="4000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="whiteBirdsLeft" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[12]}].x}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[13]}].x}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="5" PlaySpeechMyself="True" VariableOp="SetNumeric" VariableName="whiteBirdsRight" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[4]}].x}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
               <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[5]}].x}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="6" UseTTSTextExpression="stay left" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -159,7 +134,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasAstralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="7" PlaySpeechMyself="True" UseTTSTextExpression="stay right" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -169,7 +143,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasAstralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="8" UseTTSTextExpression="stay left" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -179,7 +152,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasUmbralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="9" UseTTSTextExpression="stay right" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -189,11 +161,9 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasUmbralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="10" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="6000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="11" UseTTSTextExpression="go side" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -203,7 +173,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasAstralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="12" UseTTSTextExpression="go corner" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -213,7 +182,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasAstralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="13" UseTTSTextExpression="go side" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -223,7 +191,6 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasUmbralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="14" UseTTSTextExpression="go corner" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
             <Condition Enabled="true" Grouping="And">
@@ -233,71 +200,96 @@
               </ConditionGroup>
               <ConditionSingle Enabled="true" ExpressionL="${evar:hasUmbralDebuff}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="15" UseTTSTextExpression="go middle" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="9000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="16" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="1000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="17" VariableOp="SetString" VariableName="swapOrStayTTS" VariableExpression="go back and swap" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionGroup Enabled="true" Grouping="Or">
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+              </ConditionGroup>
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="105" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="85" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="18" VariableOp="SetString" VariableName="swapOrStayTTStwo" VariableExpression="swap" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionGroup Enabled="true" Grouping="Or">
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+              </ConditionGroup>
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="105" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="85" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
               </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="19" VariableOp="SetString" VariableName="swapOrStayTTS" VariableExpression="go back" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionGroup Enabled="true" Grouping="Or">
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
-              <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="105" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="85" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="20" VariableOp="SetString" VariableName="swapOrStayTTStwo" VariableExpression="stay" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionGroup Enabled="true" Grouping="Or">
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="115" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="95" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
               </ConditionGroup>
-              <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsLeft}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionGroup Enabled="true" Grouping="And">
+                <ConditionGroup Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="105" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${lvar:unforgivenIdolatries[8]}].y}" ExpressionTypeL="String" ExpressionR="85" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </ConditionGroup>
+                <ConditionSingle Enabled="true" ExpressionL="${evar:whiteBirdsRight}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              </ConditionGroup>
             </Condition>
-            <Conditions />
           </Action>
           <Action OrderNumber="21" VariableOp="SetString" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="22" UseTTSTextExpression="${var:swapOrStayTTS}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="3000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="23" UseTTSTextExpression="${var:swapOrStayTTStwo}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS" ExecutionDelayExpression="4000">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
           <Action OrderNumber="24" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerOp="DisableTrigger" TriggerId="04a7374b-ee6a-4c62-9aeb-d219eb280fbd" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
