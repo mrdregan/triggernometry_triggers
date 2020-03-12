@@ -9,7 +9,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Action>
-          <Action OrderNumber="2" VariableName="shivaId" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="16000">
+          <Action OrderNumber="2" VariableName="shivaId" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Variable" ExecutionDelayExpression="17000">
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Action>
@@ -57,7 +57,7 @@
             </Condition>
             <Conditions />
           </Action>
-          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="400">
+          <Action OrderNumber="4" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage" ExecutionDelayExpression="500">
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Action>
