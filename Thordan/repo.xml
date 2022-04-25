@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="f8dc9095-5ced-4c4d-b599-61cfe18ebb32" Name="Thordan" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="false" Sequential="True" IsReadme="True" Name="Placeholder" Id="98a2d4f0-acd0-4b44-94b6-c336e99e1dd5" RegularExpression="" DebugLevel="None">
+        <Actions />
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
