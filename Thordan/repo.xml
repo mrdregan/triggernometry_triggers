@@ -1,12 +1,50 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
   <ExportedFolder Id="f8dc9095-5ced-4c4d-b599-61cfe18ebb32" Name="Thordan" Enabled="true">
-    <Folders />
+    <Folders>
+      <Folder Id="90d3e6a5-63c9-4556-8dc0-80095db9ee93" Name="Nidhogg" Enabled="true">
+        <Folders />
+        <Triggers />
+      </Folder>
+      <Folder Id="841253e5-fe08-4dad-a850-652c03cef1a4" Name="Hraesvelgr" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="test" Id="a634e931-ae98-4c02-8324-80c051b7d384" RegularExpression="">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraAlignment="TopLeft" TextAuraFontSize="36" TextAuraExpression="Testtext" TextAuraXIniExpression="325" TextAuraYIniExpression="116" TextAuraWIniExpression="327" TextAuraHIniExpression="56" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="e45a36ad-8d2e-48c2-859c-eff4c92b20b8" Name="Knights" Enabled="true">
+        <Folders />
+        <Triggers />
+      </Folder>
+      <Folder Id="81bcb27a-bb6b-4017-8b3a-19861c08c0ce" Name="Thordan" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Dodge (Ascalon's Mercy Concealed)" Id="fd7446ab-f5cc-44a6-a2b1-be723829838b" RegularExpression="14:[^:]*:[^:]*:63C8:">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="2500">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Dodge" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
     <Triggers>
       <Trigger Enabled="false" Sequential="True" IsReadme="True" Name="Placeholder" Id="98a2d4f0-acd0-4b44-94b6-c336e99e1dd5" RegularExpression="" DebugLevel="None">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
