@@ -12,7 +12,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="High Jump Target" Id="610bfd62-9230-488e-b883-afcdfa905b16" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of High Jump Target">
             <Actions>
@@ -21,7 +20,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Gnash and Lash" Id="7ec484ca-db0c-403b-8bd5-02139f79d7af" RegularExpression="14:[^:]*:[^:]*:[^:]*:Gnash and Lash">
             <Actions>
@@ -31,21 +29,26 @@
               <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Out then In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="7000">
+              <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="2000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" OBSEndPoint="" UseTTSTextExpression="Out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="4" OBSEndPoint="" UseTTSTextExpression="Stack" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="3000">
+              <Action OrderNumber="5" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" OBSEndPoint="" UseTTSTextExpression="In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="6" OBSEndPoint="" UseTTSTextExpression="Out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="3000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" UseTTSTextExpression="In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Spineshatter Dive Target" Id="bdec2fb7-f7f1-410f-9daa-ca9a2b032d93" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Spineshatter Dive Target">
             <Actions>
@@ -54,7 +57,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="First in Line" Id="28b67b59-e5b6-4108-a70b-436e3196a7e1" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of First in Line">
             <Actions>
@@ -63,7 +65,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Second in Line" Id="26db9676-d35a-490d-9a44-955debb260a8" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Second in Line">
             <Actions>
@@ -72,7 +73,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Third in Line" Id="d7c48072-9db9-4576-b88b-1dc8d07c4328" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Third in Line">
             <Actions>
@@ -81,7 +81,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Lash and Gnash" Id="131c7ac9-1989-48ef-8989-52d67ba01905" RegularExpression="14:[^:]*:[^:]*:[^:]*:Lash and Gnash">
             <Actions>
@@ -91,36 +90,32 @@
               <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="In then Out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="7000">
+              <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="2000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="4" OBSEndPoint="" UseTTSTextExpression="In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="4" OBSEndPoint="" UseTTSTextExpression="Stack" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="5" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="3000">
+              <Action OrderNumber="5" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="5000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="6" OBSEndPoint="" UseTTSTextExpression="Out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="6" OBSEndPoint="" UseTTSTextExpression="In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="3000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" OBSEndPoint="" UseTTSTextExpression="Out" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
       <Folder Id="841253e5-fe08-4dad-a850-652c03cef1a4" Name="Hraesvelgr" Enabled="true">
         <Folders />
-        <Triggers>
-          <Trigger Enabled="true" Name="test" Id="a634e931-ae98-4c02-8324-80c051b7d384" RegularExpression="">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" TextAuraAlignment="TopLeft" TextAuraFontSize="36" TextAuraExpression="Testtext" TextAuraXIniExpression="325" TextAuraYIniExpression="116" TextAuraWIniExpression="327" TextAuraHIniExpression="56" TextAuraOIniExpression="100" TextAuraUseOutline="True" TextAuraFontName="Microsoft Sans Serif" ActionType="TextAura">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-        </Triggers>
+        <Triggers />
       </Folder>
       <Folder Id="e45a36ad-8d2e-48c2-859c-eff4c92b20b8" Name="Knights" Enabled="true">
         <Folders />
@@ -139,16 +134,10 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
     </Folders>
-    <Triggers>
-      <Trigger Enabled="false" Sequential="True" IsReadme="True" Name="Placeholder" Id="98a2d4f0-acd0-4b44-94b6-c336e99e1dd5" RegularExpression="" DebugLevel="None">
-        <Actions />
-        <Condition Enabled="false" Grouping="Or" />
-      </Trigger>
-    </Triggers>
+    <Triggers />
   </ExportedFolder>
 </TriggernometryExport>
