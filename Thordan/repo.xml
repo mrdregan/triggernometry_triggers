@@ -601,10 +601,10 @@
         <Triggers>
           <Trigger Enabled="true" Name="Twisting Dive" Id="0ad016cf-a624-4398-8937-fb4880877193" RegularExpression="14:[^:]*:[^:]*:6B8B:">
             <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="6000">
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="5700">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
-              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Dodge" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Twister" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
