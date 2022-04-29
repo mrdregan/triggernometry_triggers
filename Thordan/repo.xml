@@ -53,7 +53,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="First in Line" Id="cdd665b3-64e0-4bf7-a875-5e27805021d7" RegularExpression="^.{14} StatusAdd 1A:BBC:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
                 <Actions>
@@ -85,7 +84,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="Second in Line" Id="9f4c21c4-cb09-4e43-a403-0d6c0da1e4ce" RegularExpression="^.{14} StatusAdd 1A:BBD:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
                 <Actions>
@@ -114,7 +112,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="Third in Line" Id="4108ceea-160e-41d4-b456-6d9dc8967fa8" RegularExpression="^.{14} StatusAdd 1A:BBE:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
                 <Actions>
@@ -146,7 +143,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="High Jump Target List" Id="e182ad93-0241-42be-8ae9-747e7163ac1d" RegularExpression="^.{14} StatusAdd 1A:AC3:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
                 <Actions>
@@ -227,7 +223,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="And" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Name="Elusive/Spineshatter/High Jump Target" Id="29395b6b-7c56-4435-aa54-94e2eb7e0a01" RegularExpression="^.{14} StatusAdd 1A:(?&lt;debuff&gt;(AC3|AC4|AC5)):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
                 <Actions>
@@ -520,28 +515,15 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
+          <Folder Id="bb3c16b4-259e-49fd-8733-cd12c6eeaf1b" Name="Eyes" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
         </Folders>
         <Triggers>
-          <Trigger Enabled="false" Name="Elusive Jump Target" Id="3a416c34-5bad-48ff-91f1-e2aa02b1c128" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Elusive Jump Target">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Bravo Side" UseTTSExclusive="False" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="High Jump Target" Id="610bfd62-9230-488e-b883-afcdfa905b16" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of High Jump Target">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Discuss side" UseTTSExclusive="False" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
           <Trigger Enabled="true" Name="Gnash and Lash" Id="7ec484ca-db0c-403b-8bd5-02139f79d7af" RegularExpression="14:[^:]*:[^:]*:[^:]*:Gnash and Lash">
             <Actions>
               <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="1000">
@@ -560,38 +542,6 @@
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
               <Action OrderNumber="6" OBSEndPoint="" UseTTSTextExpression="In" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="Spineshatter Dive Target" Id="bdec2fb7-f7f1-410f-9daa-ca9a2b032d93" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Spineshatter Dive Target">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Delta Side" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="First in Line" Id="28b67b59-e5b6-4108-a70b-436e3196a7e1" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of First in Line">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="First bait" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="Second in Line" Id="26db9676-d35a-490d-9a44-955debb260a8" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Second in Line">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="second bait" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
-              </Action>
-            </Actions>
-            <Condition Enabled="false" Grouping="Or" />
-          </Trigger>
-          <Trigger Enabled="false" Name="Third in Line" Id="d7c48072-9db9-4576-b88b-1dc8d07c4328" RegularExpression="00:[^:]*:[^:]*:You suffer the effect of Third in Line">
-            <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="third bait" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -643,6 +593,23 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="1d910c2c-7547-4ca8-bfff-f5f755c2dd7c" Name="Thordan Alternate Timeline" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="Twisting Dive" Id="0ad016cf-a624-4398-8937-fb4880877193" RegularExpression="14:[^:]*:[^:]*:6B8B:">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="6000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Dodge" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
