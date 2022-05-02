@@ -596,7 +596,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:doomtargets.indexof(Sef Ka)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="100">
+                  <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="dothrightdoom" ListVariableExpression="Bastian Kursch" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -647,7 +647,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:dothleftnodoom.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="18" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="100">
+                  <Action OrderNumber="18" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="19" ListVariableOp="Push" ListVariableName="dothleftdoom" ListVariableExpression="Bastian Kursch" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -662,7 +662,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:doomtargets.indexof(Bastian Kursch)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="21" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="100">
+                  <Action OrderNumber="21" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="22" ListVariableOp="Push" ListVariableName="dothleftdoom" ListVariableExpression="Xephros Oteya" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -677,7 +677,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:doomtargets.indexof(Xephros Oteya)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="24" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="100">
+                  <Action OrderNumber="24" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="25" ListVariableOp="Push" ListVariableName="dothrightdoom" ListVariableExpression="Kratossos Falkenauge" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -692,7 +692,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:doomtargets.indexof(Kratossos Falkenauge)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="27" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="100">
+                  <Action OrderNumber="27" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="28" ListVariableOp="Push" ListVariableName="dothrightdoom" ListVariableExpression="Arianrhod Arseid" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
@@ -707,7 +707,7 @@
                       <ConditionSingle Enabled="true" ExpressionL="${lvar:doomtargets.indexof(Arianrhod Arseid)}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="30" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" Enabled="False" ActionType="Placeholder">
+                  <Action OrderNumber="30" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="250">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                   <Action OrderNumber="31" OBSEndPoint="" UseTTSTextExpression="SouthWest" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
