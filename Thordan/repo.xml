@@ -554,7 +554,7 @@
           <Folder Id="a546b1ed-1047-469b-b954-6905d1646e7e" Name="Death of the Heavens" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Sequential="True" Name="Assignments" Id="f65afb3c-73b6-4400-a0e0-ffe5c6a00a60" RegularExpression="">
+              <Trigger Enabled="false" Sequential="True" Name="Assignments" Id="f65afb3c-73b6-4400-a0e0-ffe5c6a00a60" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dothleftdoom" ListVariableExpression="Sonrilol Tempest" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
