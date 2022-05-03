@@ -525,9 +525,239 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="841253e5-fe08-4dad-a850-652c03cef1a4" Name="Hraesvelgr" Enabled="true">
+      <Folder Id="841253e5-fe08-4dad-a850-652c03cef1a4" Name="Hraesvelgr+Nidhogg" Enabled="true">
         <Folders />
-        <Triggers />
+        <Triggers>
+          <Trigger Enabled="true" Name="Hot Tail" Id="3e6957cb-dfc0-4947-b328-506185da74ad" RegularExpression="14:[^:]*:[^:]*:[^:]*:Hot Tail">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Side Safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Great Wyrmsbreath" Id="b757e412-0776-453b-a6a2-db045c34ac12" RegularExpression="14:[^:]*:[^:]*:[^:]*:Great Wyrmsbreath">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Watch Head" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="9000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" UseTTSTextExpression="spread" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Entangled/Spreading Flame" Id="1498763f-f648-4c81-85bf-0372dcf2d244" RegularExpression="^.{14} StatusAdd 1A:[^:]*:(?&lt;debuff&gt;(Entangled|Spreading)) Flame:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="entangledflames" ListVariableExpression="${name}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="Entangled" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="spreadingflames" ListVariableExpression="${name}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${debuff}" ExpressionTypeL="String" ExpressionR="Spreading" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" TriggerId="a240e721-6716-46ed-a901-705e318fdddc" TriggerForce="regexp,active" ActionType="Trigger">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Mortal Vow" Id="417cb1bb-d5ce-4973-ace7-29741b0e433a" RegularExpression="^.{14} StatusAdd 1A:[^:]*:Mortal Vow:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="30000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" UseTTSTextExpression="pass debuff" VariableOp="SetNumeric" VariableName="hasFirstInLine" VariableExpression="1" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&#xD;&#xA;   &quot;version&quot;:1,&#xD;&#xA;   &quot;id&quot;:123456,&#xD;&#xA;   &quot;type&quot;:&quot;Bundle&quot;,&#xD;&#xA;   &quot;payload&quot;:[&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk ignore1 &lt;${_ffxivparty[${name}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      }&#xD;&#xA;   ]&#xD;&#xA;}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="5000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&#xD;&#xA;   &quot;version&quot;:1,&#xD;&#xA;   &quot;id&quot;:123456,&#xD;&#xA;   &quot;type&quot;:&quot;Bundle&quot;,&#xD;&#xA;   &quot;payload&quot;:[&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk off &lt;${_ffxivparty[${name}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      }&#xD;&#xA;   ]&#xD;&#xA;}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Hot Wing" Id="8d6f9a57-44a5-4419-97a5-ffc7974c88e0" RegularExpression="14:[^:]*:[^:]*:[^:]*:Hot Wing">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="2000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="Middle Safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Hallowed Wings" Id="a4a3d6ff-1a78-4444-b97f-9e88cd350b06" RegularExpression="14:[^:]*:[^:]*:[^:]*:Hallowed Wings">
+            <Actions>
+              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Watch Head" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="false" Source="None" Sequential="True" Name="Assignments Entangled/Spreading Flame (KEEP ME DISABLED)" Id="a240e721-6716-46ed-a901-705e318fdddc" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
+            <Actions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[1]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[1]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[2]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[2]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[3]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[3]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[3]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[4]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[4]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[4]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[5]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[5]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[5]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[6]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[6]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[6]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[7]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[7]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[7]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="noflames" ListVariableExpression="${lvar:partylist[8]}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${lvar:partylist[8]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:entangledflames.indexof(${lvar:partylist[8]})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="9" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="14000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" OBSEndPoint="" UseTTSTextExpression="go left spread" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="11" OBSEndPoint="" UseTTSTextExpression="go right stack same symbol" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${lvar:spreadingflames.indexof(${_ffxivplayer})}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="12" JsonCacheRequest="True" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&#xD;&#xA;   &quot;version&quot;:1,&#xD;&#xA;   &quot;id&quot;:123456,&#xD;&#xA;   &quot;type&quot;:&quot;Bundle&quot;,&#xD;&#xA;   &quot;payload&quot;:[&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk attack1 &lt;${_ffxivparty[${lvar:entangledflames[1]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk bind1 &lt;${_ffxivparty[${lvar:entangledflames[2]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk attack2 &lt;${_ffxivparty[${lvar:noflames[1]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk bind2 &lt;${_ffxivparty[${lvar:noflames[2]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      }&#xD;&#xA;   ]&#xD;&#xA;}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="13" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Placeholder" ExecutionDelayExpression="8000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="14" JsonCacheRequest="True" JsonEndpointExpression="http://localhost:51323/" JsonPayloadExpression="{&#xD;&#xA;   &quot;version&quot;:1,&#xD;&#xA;   &quot;id&quot;:123456,&#xD;&#xA;   &quot;type&quot;:&quot;Bundle&quot;,&#xD;&#xA;   &quot;payload&quot;:[&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk off &lt;${_ffxivparty[${lvar:entangledflames[1]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk off &lt;${_ffxivparty[${lvar:entangledflames[2]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk off &lt;${_ffxivparty[${lvar:noflames[1]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      },&#xD;&#xA;      {&#xD;&#xA;         &quot;id&quot;:123456,&#xD;&#xA;         &quot;type&quot;:&quot;ExecuteCommand&quot;,&#xD;&#xA;         &quot;payload&quot;:{&#xD;&#xA;            &quot;command&quot;:&quot;/mk off &lt;${_ffxivparty[${lvar:noflames[2]}].order}&gt;&quot;&#xD;&#xA;         }&#xD;&#xA;      }&#xD;&#xA;   ]&#xD;&#xA;}" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="GenericJson">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="Trigger Point" Id="9690d0f1-6c31-469c-b12e-35dc2732b4db" RegularExpression="14:[^:]*:[^:]*:[^:]*:Dread Wyrmsbreath">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="partylist" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableName="entangledflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableName="spreadingflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableName="noflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Dregan Kaskara" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Sonrilol Tempest" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Sef Ka" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Van Gherwen" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="9" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Xephros Oteya" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Arianrhod Arseid" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="11" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Kratossos Falkenauge" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="12" ListVariableOp="Push" ListVariableName="partylist" ListVariableExpression="Bastian Kursch" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="Wipe" Id="48140acc-f153-4ed0-842a-f41e4b635ab4" RegularExpression="^\[[\d:\.]{12}\] Director 21:[\w]{8}:400000(03|10)">
+            <Actions>
+              <Action OrderNumber="1" ListVariableName="partylist" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" ListVariableName="entangledflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" ListVariableName="spreadingflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" ListVariableName="noflames" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
       </Folder>
       <Folder Id="e45a36ad-8d2e-48c2-859c-eff4c92b20b8" Name="Knights" Enabled="true">
         <Folders />
@@ -554,7 +784,7 @@
           <Folder Id="a546b1ed-1047-469b-b954-6905d1646e7e" Name="Death of the Heavens" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="false" Sequential="True" Name="Assignments" Id="f65afb3c-73b6-4400-a0e0-ffe5c6a00a60" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
+              <Trigger Enabled="false" Sequential="True" Name="Assignments (KEEP ME DISABLED)" Id="f65afb3c-73b6-4400-a0e0-ffe5c6a00a60" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
                 <Actions>
                   <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="dothleftdoom" ListVariableExpression="Sonrilol Tempest" OBSEndPoint="" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="ListVariable">
                     <Condition Enabled="true" Grouping="Or">
