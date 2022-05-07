@@ -538,9 +538,8 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Great Wyrmsbreath" Id="b757e412-0776-453b-a6a2-db045c34ac12" RegularExpression="14:[^:]*:[^:]*:[^:]*:Great Wyrmsbreath">
+          <Trigger Enabled="true" Name="Dread/Great Wyrmsbreath" Id="b757e412-0776-453b-a6a2-db045c34ac12" RegularExpression="14:[^:]*:[^:]*:[^:]*:Great Wyrmsbreath">
             <Actions>
               <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Watch Head" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
                 <Condition Enabled="false" Grouping="Or" />
@@ -553,7 +552,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="Entangled/Spreading Flame" Id="1498763f-f648-4c81-85bf-0372dcf2d244" RegularExpression="^.{14} StatusAdd 1A:(?&lt;debuff&gt;(AC7|AC6)):[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
             <Actions>
@@ -575,7 +573,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="Mortal Vow" Id="417cb1bb-d5ce-4973-ace7-29741b0e433a" RegularExpression="^.{14} StatusAdd 1A:B50:[^:]*:[^:]*:[^:]*:[^:]*:[^:]*:(?&lt;name&gt;[\w'\- ]{1,21})">
             <Actions>
@@ -598,7 +595,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Hot Wing" Id="8d6f9a57-44a5-4419-97a5-ffc7974c88e0" RegularExpression="14:[^:]*:[^:]*:[^:]*:Hot Wing">
             <Actions>
@@ -610,16 +606,31 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="Hallowed Wings" Id="a4a3d6ff-1a78-4444-b97f-9e88cd350b06" RegularExpression="14:[^:]*:[^:]*:[^:]*:Hallowed Wings">
+          <Trigger Enabled="true" Name="Hallowed Wings" Id="a4a3d6ff-1a78-4444-b97f-9e88cd350b06" RegularExpression="14:[^:]*:[^:]*:(?&lt;castId&gt;(6D26|6D23|6D27|6D24)):">
             <Actions>
-              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="Watch Head" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
-                <Condition Enabled="false" Grouping="Or" />
+              <Action OrderNumber="1" OBSEndPoint="" UseTTSTextExpression="group out right safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${castId}" ExpressionTypeL="String" ExpressionR="6D26" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="2" OBSEndPoint="" UseTTSTextExpression="group out left safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${castId}" ExpressionTypeL="String" ExpressionR="6D23" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" OBSEndPoint="" UseTTSTextExpression="group in right safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${castId}" ExpressionTypeL="String" ExpressionR="6D27" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" OBSEndPoint="" UseTTSTextExpression="group in left safe" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${castId}" ExpressionTypeL="String" ExpressionR="6D24" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="false" Source="None" Sequential="True" Name="Assignments Entangled/Spreading Flame (KEEP ME DISABLED)" Id="a240e721-6716-46ed-a901-705e318fdddc" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="5000">
             <Actions>
@@ -695,7 +706,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Sequential="True" Name="Trigger Point" Id="9690d0f1-6c31-469c-b12e-35dc2732b4db" RegularExpression="14:[^:]*:[^:]*:[^:]*:Dread Wyrmsbreath">
             <Actions>
@@ -737,7 +747,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
           <Trigger Enabled="true" Name="Wipe" Id="48140acc-f153-4ed0-842a-f41e4b635ab4" RegularExpression="^\[[\d:\.]{12}\] Director 21:[\w]{8}:400000(03|10)">
             <Actions>
@@ -755,7 +764,6 @@
               </Action>
             </Actions>
             <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
           </Trigger>
         </Triggers>
       </Folder>
