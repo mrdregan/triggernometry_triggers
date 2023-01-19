@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="02e39172-2461-47b4-964b-a86b105c1a62" Name="The Omega Protocol" Enabled="true">
+    <Folders>
+      <Folder Id="9c4f3844-a332-49b0-9757-314c51d23ddd" Name="Prepared Old Content Triggers" Enabled="true">
+        <Folders>
+          <Folder Id="adf69e85-83d2-4f8c-985b-1998f326f862" Name="O10S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="858d73bf-d92a-4efb-bd6f-0601d05c1436" Name="O01S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="cee699a6-e3d3-4bdc-87fc-797cafe504c2" Name="O09S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="694fb048-0548-4dfe-823d-ff52fa3ee954" Name="O08S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="9b3a5d9a-640f-4790-89a2-2212edf59df8" Name="O07S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="b11e3103-0ccd-4646-a37c-85c382d708c7" Name="O06S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="d2be2fd9-4977-4bae-8d1d-9aeddd019b45" Name="O05S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="92fc4e5a-4a03-4e09-9311-a1fe342eaf85" Name="O04S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="e743106f-d657-4ad5-904a-dc814a5f0967" Name="O03S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="7025f36a-79cc-4bcd-a563-f068fa5232d8" Name="O02S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="6681390d-1587-4879-962f-930b23824183" Name="O11S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+          <Folder Id="3e5592f6-e45f-4fc9-b30a-89412d8eb610" Name="O12S" Enabled="true">
+            <Folders />
+            <Triggers />
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+    </Folders>
+    <Triggers>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="eeacbfc1-7099-45cc-bec1-7d8ce753e2fa" RegularExpression="^(01|33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|)">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Repository">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
