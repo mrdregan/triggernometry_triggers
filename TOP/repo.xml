@@ -10,7 +10,17 @@
           </Folder>
           <Folder Id="858d73bf-d92a-4efb-bd6f-0601d05c1436" Name="O01S" Enabled="true">
             <Folders />
-            <Triggers />
+            <Triggers>
+              <Trigger Enabled="true" Name="Clamp" Id="c5b883fd-672a-4366-962e-210aa0e64d41" RegularExpression="readies Clamp.">
+                <Actions>
+                  <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="Clamp" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
           </Folder>
           <Folder Id="cee699a6-e3d3-4bdc-87fc-797cafe504c2" Name="O09S" Enabled="true">
             <Folders />
@@ -60,6 +70,9 @@
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="eeacbfc1-7099-45cc-bec1-7d8ce753e2fa" RegularExpression="^(01|33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|)">
         <Actions>
           <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="Repository">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" LogMessageText="Test wipe" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="8.25" TextAuraFontName="Microsoft Sans Serif" ActionType="LogMessage">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
