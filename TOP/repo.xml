@@ -194,7 +194,7 @@
                 </Condition>
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Remote Glitch" Id="a1b13c1b-abb7-45d5-a663-5bd0444f05e6" RegularExpression="^26\|[^|]*\|D63\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Remote Glitch" Id="a1b13c1b-abb7-45d5-a663-5bd0444f05e6" RegularExpression="^26\|[^|]*\|D64\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="far spots" ActionType="UseTTS">
                     <Condition Enabled="false" Grouping="Or" />
@@ -292,7 +292,7 @@
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Condensed Wave Cannon Kyrios" Id="896a6bf9-b4e1-4ac0-8a30-7a82ec559e48" RegularExpression="^26\|[^|]*\|(DB3|DB4|DB5|DB6)\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+              <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Condensed Wave Cannon Kyrios" Id="896a6bf9-b4e1-4ac0-8a30-7a82ec559e48" RegularExpression="^26\|[^|]*\|(DB3|DB4|DB5|DB6)\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
                 <Actions>
                   <Action OrderNumber="1" UseTTSTextExpression="next beam" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-6)*1000">
                     <Condition Enabled="true" Grouping="Or">
