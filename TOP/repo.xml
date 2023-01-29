@@ -198,9 +198,9 @@
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
           </Trigger>
-          <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="Critical Synchronization Bug" Id="ab6845f9-4033-4c0e-91a2-486de0921b00" RegularExpression="^26\|[^|]*\|DC4\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Critical Synchronization Bug (Stack)" Id="ab6845f9-4033-4c0e-91a2-486de0921b00" RegularExpression="^26\|[^|]*\|DC4\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
             <Actions>
-              <Action OrderNumber="1" UseTTSTextExpression="stack" ActionType="UseTTS">
+              <Action OrderNumber="1" UseTTSTextExpression="stack" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-4)*1000">
                 <Condition Enabled="false" Grouping="Or" />
               </Action>
             </Actions>
@@ -317,6 +317,14 @@
             <Condition Enabled="true" Grouping="Or">
               <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
             </Condition>
+          </Trigger>
+          <Trigger Enabled="true" Name="Wave Cannon Flipped" Id="f5c7b7e9-ee18-4db4-a2ba-308af007e08b" RegularExpression="14:[^:]*:[^:]*:7B6C:">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="Flipped" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
           </Trigger>
         </Triggers>
       </Folder>
