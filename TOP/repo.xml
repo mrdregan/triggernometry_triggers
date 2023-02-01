@@ -427,6 +427,18 @@
         </Triggers>
       </Folder>
     </Folders>
-    <Triggers />
+    <Triggers>
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="eeacbfc1-7099-45cc-bec1-7d8ce753e2fa" RegularExpression="^(01|33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|)">
+        <Actions>
+          <Action OrderNumber="1" ActionType="Repository">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" FolderId="ce240645-6f41-4bd2-92bc-01c00bde36ae" ActionType="Folder">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
   </ExportedFolder>
 </TriggernometryExport>
