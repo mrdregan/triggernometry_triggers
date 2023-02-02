@@ -426,6 +426,33 @@
           </Trigger>
         </Triggers>
       </Folder>
+      <Folder Id="c11939a7-0738-43ee-8509-ac0bc67d1663" Name="P5" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Hello, Near World" Id="4dffe45d-668b-49b8-8055-fe1537383fe3" RegularExpression="^26\|[^|]*\|D72\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="near world" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-10)*1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="Hello, Distant World" Id="b047484a-6a4d-476f-beb8-46f94ca0fce7" RegularExpression="^26\|[^|]*\|D73\|[^|]*\|(?&lt;duration&gt;[^|]*)\|[^|]*\|[^|]*\|[^|]*\|(?&lt;name&gt;[^|]*)\|">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="distant world" ActionType="UseTTS" ExecutionDelayExpression="(${duration}-10)*1000">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
     </Folders>
     <Triggers>
       <Trigger Enabled="true" Source="FFXIVNetwork" Name="Wipe" Id="eeacbfc1-7099-45cc-bec1-7d8ce753e2fa" RegularExpression="^(01|33\|[^|]*\|[^|]*\|400000(?&gt;03|0F)\|)">
